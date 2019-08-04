@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: gray;
+}
+
+:root{
+    --largeBox: darkgrey;
+    --smallBox: black;
+}
+
+#menu{
+    display: table;
+    margin: 100px auto;
+}
+
+#menu button{
+    display: block;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 8px 16px;
+    margin: 16px 0px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+#menu button:hover{
+    background-color: darkgray;
+}
+
+#menu p{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#game{
+    display: none;
+}
+
+.turn-container{
+    height: 10vh;
+    width: 90vh;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.turn-container p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 10vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+#conquest-indicator{
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 8px;
+    font-size: 12px;
+}
+
+.largeTTC-container{
+    width: 90vh;
+    height: 90vh;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.smallTTC-container{
+    width: 96%;
+    height: 96%;
+    margin: 2% 2%;
+}
+
+.TTC-sections{
+    width: 32%;
+    height: 33%;
+    float: left;
+}
+
+.TTC-sections p{
+    pointer-events: none;
+    font-size: 160px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 31%;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.TTC-boxes{
+    cursor: pointer;
+    width: 32%;
+    height: 32%;
+    float: left;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#top-left-section{
+    border-right: solid 1px var(--largeBox);
+    border-bottom: solid 1px var(--largeBox);
+}
+#top-middle-section{
+    border-right: solid 1px var(--largeBox);
+    border-left: solid 1px var(--largeBox);
+    border-bottom: solid 1px var(--largeBox);
+}
+#top-right-section{
+    border-left: solid 1px var(--largeBox);
+    border-bottom: solid 1px var(--largeBox);
+}
+#middle-left-section{
+    border-top: solid 1px var(--largeBox);
+    border-bottom: solid 1px var(--largeBox);
+    border-right: solid 1px var(--largeBox);
+}
+#middle-middle-section{
+    border: solid 1px var(--largeBox);
+}
+#middle-right-section{
+    border-top: solid 1px var(--largeBox);
+    border-bottom: solid 1px var(--largeBox);
+    border-left: solid 1px var(--largeBox);
+}
+#bottom-left-section{
+    border-right: solid 1px var(--largeBox);
+    border-top: solid 1px var(--largeBox);
+}
+#bottom-middle-section{
+    border-right: solid 1px var(--largeBox);
+    border-left: solid 1px var(--largeBox);
+    border-top: solid 1px var(--largeBox);
+}
+#bottom-right-section{
+    border-left: solid 1px var(--largeBox);
+    border-top: solid 1px var(--largeBox);
+}
+
+
+.top-left-box{
+    border-right: solid 1px var(--smallBox);
+}
+.top-middle-box{
+    border-right: solid 1px var(--smallBox);
+}
+.top-right-box{
+    border: none;
+}
+.middle-left-box{
+    border-top: solid 1px var(--smallBox);
+    border-bottom: solid 1px var(--smallBox);
+}
+.middle-middle-box{
+    border: solid 1px var(--smallBox);
+}
+.middle-right-box{
+    border-top: solid 1px var(--smallBox);
+    border-bottom: solid 1px var(--smallBox);
+}
+.bottom-left-box{
+    border-right: solid 1px var(--smallBox);
+}
+.bottom-middle-box{
+    border-right: solid 1px var(--smallBox);
+}
+.bottom-right-box{
+    border: none;
+}
