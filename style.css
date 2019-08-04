@@ -182,7 +182,7 @@ body{
     border: none;
 }
 
-@media only screen and (max-aspect-ratio: 9/10){
+@media only screen and (max-aspect-ratio: 9/10), screen and (max-width: 550px){
     .largeTTC-container{
         width: 98vw;
         height: 98vw;
