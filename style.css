@@ -181,3 +181,19 @@ body{
 .bottom-right-box{
     border: none;
 }
+
+@media only screen and (max-aspect-ratio: 9/10){
+    .largeTTC-container{
+        width: 98vw;
+        height: 98vw;
+        margin-bottom: 2vh;
+    }
+
+    .TTC-sections p{
+        font-size: 31vw;
+    }
+    
+    .TTC-boxes{
+        font-size: 10vw;
+    }
+}
