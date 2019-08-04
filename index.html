@@ -12,7 +12,7 @@
 
         <div id="menu">
             <p class="game-title">Ultimate Tic-Tac-Toe</p>
-            <a href="instructions.html"><button type="button">How To Play</button></a>
+            <button type="button" onclick="instructions()">How To Play</button>
             <button type="button" onclick="startGame('conquest')">Conquest Play</button>
             <button type="button" onclick="startGame('normal')">Normal Play</button>
         </div>
@@ -151,6 +151,25 @@
                 </div>
             </div>
         </div>
+
+        <div id="instructions-container">
+            <h1>How To Play</h1>
+            <p>The game is relatively simple, it's just like Tic-Tac-Toe... except you're playing 9 games... 
+                all at once...</p>
+            <p>The first player may start anywhere in any of the Tic-Tac-Toe games. But note that where you go
+                controls where the next player goes. For example, if you play in the top left box of any of the Tic-Tac-Toe games,
+                the next player must play in the top left Tic-Tac-Toe game. Then if they play in the center box of the top left Tic-Tac-Toe game,
+                you must play your next move in the center Tic-Tac-Toe game.</p>
+            <p>Once you get three in a row in any of the games, a red letter will be overlaid to indicate that you won that game.
+                Both players may still play in a game that's already been claimed, but once an individual game has been won, 
+                the outcome cannot be changed, even if the other player gets three in a row after it's been claimed.</p>
+            <p>In order to win, you must get three in a row by winning the individual Tic-Tac-Toe games.</p>
+            <h3>Conquest Version</h3>
+            <p>The only difference in the conquest version is that if you get three in a row in a game that's already been won,
+                you take over that game and are declared the winner of that game. So be careful to protect your winnings!</p>
+            <button type="button" onclick="returnHome()">Return to Home</button>
+        </div>
+
 
         <script src='main.js'></script>
     </body>

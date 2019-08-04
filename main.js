@@ -19,6 +19,16 @@ let nextSection = "";
 let gameStyle = "normal";
 let conquest = false;
 
+function instructions(){
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("instructions-container").style.display = "block";
+}
+
+function returnHome(){
+    document.getElementById("menu").style.display = "table";
+    document.getElementById("instructions-container").style.display = "none";
+}
+
 function startGame(gameStyle){
     if(gameStyle == "conquest"){
         conquest = true;
