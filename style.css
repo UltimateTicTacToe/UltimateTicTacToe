@@ -17,6 +17,10 @@ body{
     margin: 100px auto;
 }
 
+#menu a{
+    text-decoration: none;
+}
+
 #menu button{
     display: block;
     cursor: pointer;
@@ -182,6 +186,49 @@ body{
     border: none;
 }
 
+.instructions-container{
+    width: 70vw;
+    padding: 8px 8px;
+    margin: 0 auto;
+}
+
+.instructions-container h1, p, h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.instructions-container h1{
+    padding: 16px 0;
+}
+
+.instructions-container p{
+    font-size: 18px;
+    padding: 8px 0;
+    line-height: 22px;
+}
+
+.instructions-container h3{
+    padding: 16px 0;
+}
+
+.instructions-container a{
+    text-decoration: none;
+}
+
+.instructions-container button{
+    display: block;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 8px 16px;
+    margin: 16px 0px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.instructions-container button:hover{
+    background-color: darkgray;
+}
+
 @media only screen and (max-aspect-ratio: 9/10), screen and (max-width: 550px){
     .largeTTC-container{
         width: 98vw;
@@ -195,5 +242,10 @@ body{
     
     .TTC-boxes{
         font-size: 10vw;
+    }
+
+    .instructions-container{
+        width: 100vw;
+        padding: 8px 8px;
     }
 }
