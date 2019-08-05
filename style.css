@@ -51,6 +51,7 @@ body{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
 }
 
 .turn-container p{
@@ -59,6 +60,22 @@ body{
     line-height: 10vh;
     text-align: center;
     font-weight: bold;
+}
+
+#undo-button{
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    height: 4vh;
+    padding: 0 8px;
+    margin: 8px 20px 8px 0px;
+    font-size: 12px;
+    background-color: darkgray;
+    border-radius: 5px;
+}
+
+#undo-button:hover{
+    background-color: lightgray;
 }
 
 #conquest-indicator{
@@ -70,7 +87,7 @@ body{
 
 .largeTTC-container{
     width: 90vh;
-    height: 88vh;
+    height: 83vh;
     display: inline-block;
     position: fixed;
     bottom: 0;
@@ -220,6 +237,24 @@ body{
 }
 
 #instructions-container button:hover{
+    background-color: darkgray;
+}
+
+#restart-button{
+    display: none;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 2em;
+    padding: 8px 16px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+#restart-button:hover{
     background-color: darkgray;
 }
 

@@ -19,7 +19,8 @@
 
         <div id="game">
             <div class="turn-container">
-                <p><span id="whos-turn">X</span>'s Turn | <span id="which-section">Any Section</span><span id="conquest-indicator">(conquest)</span></p>
+                <p><span id="winner-text"><span id="whos-turn">X</span>'s Turn | <span id="which-section">Any Section</span><span id="conquest-indicator">(conquest)</span></span></p>
+                <button type="button" onclick="undoMove()" id="undo-button">Undo Move</button>
             </div>
 
             <div id="largeTTC"class="largeTTC-container">
@@ -169,6 +170,8 @@
                 you take over that game and are declared the winner of that game. So be careful to protect your winnings!</p>
             <button type="button" onclick="returnHome()">Return to Home</button>
         </div>
+
+        <button type="button" onclick="location.reload()" id="restart-button">Restart</button>
 
 
         <script src='main.js'></script>

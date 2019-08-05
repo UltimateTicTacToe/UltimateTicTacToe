@@ -13,8 +13,10 @@ const BottomRightSection = document.getElementById("bottom-right-section");
 const whosTurn = document.getElementById("whos-turn");
 let sectionText = document.getElementById("which-section");
 let turn = "X";
+let lastTurn = "O";
 let box;
 let nextSection = "";
+let lastMove = "";
 
 let gameStyle = "normal";
 let conquest = false;
@@ -37,8 +39,6 @@ function startGame(gameStyle){
     document.getElementById("menu").style.display = "none";
     document.getElementById("game").style.display = "block";
 }
-
-
 
 function whichBox(nextSection){
     if(nextSection == "tl"){
@@ -240,16 +240,42 @@ function checkWinner(id, turn){
     return false;
 }
 
+function undoMove(){
+    document.getElementById(lastMove).innerHTML="";
+    whosTurn.innerHTML = lastTurn;
+    nextSection = lastMove.substring(0,2);
+    sectionText.innerHTML = whichBox(nextSection);
+}
+
+function checkFull(id){
+    //Section is full
+    if(document.getElementById(id+"tl").innerHTML != "" && 
+        document.getElementById(id+"tm").innerHTML != "" && 
+        document.getElementById(id+"tr").innerHTML != "" && 
+        document.getElementById(id+"ml").innerHTML != "" && 
+        document.getElementById(id+"mm").innerHTML != "" && 
+        document.getElementById(id+"mr").innerHTML != "" && 
+        document.getElementById(id+"bl").innerHTML != "" && 
+        document.getElementById(id+"bm").innerHTML != "" && 
+        document.getElementById(id+"br").innerHTML != ""){
+            return true;
+    }
+    //Section is NOT full
+    return false;
+}
+
 function gotClicked(id){
     box = document.getElementById(id);
+    lastMove = id;
+    lastTurn = turn;
     if(box.innerHTML=="" && (nextSection == "" || nextSection == id.substring(0,2))){
-        
         box.innerHTML = turn;
-
+        
         if(threeInARow(id, turn)){
             document.getElementById(id.substring(0,2)).innerHTML = turn;
             if(checkWinner(id, turn)){
-                alert(turn+" Wins!");
+                document.getElementById("winner-text").innerHTML = turn + " WINS!";
+                document.getElementById("restart-button").style.display = "block";
             }
         }
 
@@ -258,12 +284,16 @@ function gotClicked(id){
         }else{
             turn ="X";
         } 
-
         whosTurn.innerHTML = turn;
         nextSection = id.substring(2,4);
         sectionText.innerHTML = whichBox(nextSection);
+        
+        if(checkFull(nextSection)){
+            nextSection = "";
+            sectionText.innerHTML = "Any Section!";
+        }
 
     }else{
-        alert("Invalid Location");
+        alert("You can't go there. Please make a legal move.");
     }
 }
