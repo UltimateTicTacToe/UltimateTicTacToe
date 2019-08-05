@@ -13,10 +13,8 @@ const BottomRightSection = document.getElementById("bottom-right-section");
 const whosTurn = document.getElementById("whos-turn");
 let sectionText = document.getElementById("which-section");
 let turn = "X";
-let lastTurn = "O";
 let box;
 let nextSection = "";
-let lastMove = "";
 
 let gameStyle = "normal";
 let conquest = false;
@@ -240,13 +238,6 @@ function checkWinner(id, turn){
     return false;
 }
 
-function undoMove(){
-    document.getElementById(lastMove).innerHTML="";
-    whosTurn.innerHTML = lastTurn;
-    nextSection = lastMove.substring(0,2);
-    sectionText.innerHTML = whichBox(nextSection);
-}
-
 function checkFull(id){
     //Section is full
     if(document.getElementById(id+"tl").innerHTML != "" && 
@@ -266,8 +257,6 @@ function checkFull(id){
 
 function gotClicked(id){
     box = document.getElementById(id);
-    lastMove = id;
-    lastTurn = turn;
     if(box.innerHTML=="" && (nextSection == "" || nextSection == id.substring(0,2))){
         box.innerHTML = turn;
         

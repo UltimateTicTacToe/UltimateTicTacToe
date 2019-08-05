@@ -62,22 +62,6 @@ body{
     font-weight: bold;
 }
 
-#undo-button{
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    height: 4vh;
-    padding: 0 8px;
-    margin: 8px 20px 8px 0px;
-    font-size: 12px;
-    background-color: darkgray;
-    border-radius: 5px;
-}
-
-#undo-button:hover{
-    background-color: lightgray;
-}
-
 #conquest-indicator{
     display: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -87,7 +71,7 @@ body{
 
 .largeTTC-container{
     width: 90vh;
-    height: 83vh;
+    height: 88vh;
     display: inline-block;
     position: fixed;
     bottom: 0;
