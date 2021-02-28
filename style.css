@@ -45,6 +45,10 @@ a{
     padding: .25em .5em;
 }
 
+button:focus{
+    outline: none;
+}
+
 /*GAMEPLAY BOARD*/
 .container{
     display: flex;
@@ -1030,6 +1034,7 @@ a{
 }
 
 @media only screen and (max-aspect-ratio: 6/10){
+    /*GAMEBOARD SCREEN*/
     .in-game-info-container{
        height: 33vh;
     }
@@ -1088,6 +1093,7 @@ a{
         font-size: 7vw;
     }
 
+    /*HOW TO PLAY SCREEN*/
     .how-to-play-text-container{
         font-size: 4.5vw;
     }

@@ -58,7 +58,7 @@ function functionCaller(instructionCounter) {
 function instructionZero() {
     leftArrow.firstChild.classList.add('hide');
     gameIndicators.classList.add('hide');
-    howToPlayText.innerHTML = "The game is relatively simple, it's just like Tic-Tac-Toe - except you're playing 9 games - all at once...";
+    howToPlayText.innerHTML = "The game is relatively simple, it's just like Tic-Tac-Toe, except you're playing 9 games... all at once...";
 }
 
 function instructionOne(){
@@ -79,7 +79,7 @@ function instructionTwo() {
     cellElements.forEach(cell => {
         cell.classList.remove('X', 'O');
     })
-    howToPlayText.innerHTML = "For example, if player 1 plays in the top left box of the bottom board, the player 2 must play in the top left board.";
+    howToPlayText.innerHTML = "For example, if player 1 plays in the top left box of the bottom middle board, the player 2 must play in the top left board.";
     howToPlayText.innerHTML += "<br><br>Then, if player 2 plays in the center box of the top left board, player 1 must play their next move in the center board.";
     cellElements[63].classList.add('X');
 }
