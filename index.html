@@ -1,178 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=utf-8>
-        <meta name="viewport" content="width=device-width">
-        <title>Ultimate Tic-Tac-Toe</title>
-        <link rel="icon" href="icon.png">
-        <link href="style.css" type="text/css" rel="stylesheet">
-    </head>
-
-    <body> 
-
-        <div id="menu">
-            <p class="game-title">Ultimate Tic-Tac-Toe</p>
-            <button type="button" onclick="instructions()">How To Play</button>
-            <button type="button" onclick="startGame('conquest')">Conquest Play</button>
-            <button type="button" onclick="startGame('normal')">Normal Play</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="getTheme.js" async></script>
+    <title>Ultimate Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="main-menu-container" id="mainMenuContainer">
+        <div class= "game-title-container">
+            <h1 class="game-title">Ultimate<br/>Tic-Tac-Toe</h1>
         </div>
-
-        <div id="game">
-            <div class="turn-container">
-                <p><span id="winner-text"><span id="whos-turn">X</span>'s Turn | <span id="which-section">Any Section</span><span id="conquest-indicator">(conquest)</span></span></p>
-            </div>
-
-            <div id="largeTTC"class="largeTTC-container">
-                <div id="top-left-section" class="TTC-sections">
-                    <p id="tl"></p>
-                    <div class="smallTTC-container">
-                        <div id="tltl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tltm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tltr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tlml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tlmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tlmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tlbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tlbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tlbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-                <div id="top-middle-section" class="TTC-sections">
-                    <p id="tm"></p>
-                    <div class="smallTTC-container">
-                        <div id="tmtl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmtm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmtr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="tmbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-                <div id="top-right-section" class="TTC-sections">
-                    <p id="tr"></p>
-                    <div class="smallTTC-container">
-                        <div id="trtl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trtm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trtr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="trbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>    
-                    </div>
-                </div>
-                <div id="middle-left-section" class="TTC-sections">
-                    <p id="ml"></p>
-                    <div class="smallTTC-container">
-                        <div id="mltl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mltm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mltr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mlml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mlmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mlmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mlbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mlbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mlbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-                <div id="middle-middle-section" class="TTC-sections">
-                    <p id="mm"></p>
-                    <div class="smallTTC-container">
-                        <div id="mmtl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmtm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmtr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mmbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-                <div id="middle-right-section" class="TTC-sections">
-                    <p id="mr"></p>
-                    <div class="smallTTC-container">
-                        <div id="mrtl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrtm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrtr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="mrbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-                <div id="bottom-left-section" class="TTC-sections">
-                    <p id="bl"></p>
-                    <div class="smallTTC-container">
-                        <div id="bltl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bltm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bltr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="blml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="blmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="blmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="blbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="blbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="blbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-                <div id="bottom-middle-section" class="TTC-sections">
-                    <p id="bm"></p>
-                    <div class="smallTTC-container">
-                        <div id="bmtl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmtm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmtr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="bmbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-                <div id="bottom-right-section" class="TTC-sections">
-                    <p id="br"></p>
-                    <div class="smallTTC-container">
-                        <div id="brtl" class="TTC-boxes top-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brtm" class="TTC-boxes top-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brtr" class="TTC-boxes top-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brml" class="TTC-boxes middle-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brmm" class="TTC-boxes middle-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brmr" class="TTC-boxes middle-right-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brbl" class="TTC-boxes bottom-left-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brbm" class="TTC-boxes bottom-middle-box" onclick="gotClicked(this.id)"></div>
-                        <div id="brbr" class="TTC-boxes bottom-right-box" onclick="gotClicked(this.id)"></div>
-                    </div>
-                </div>
-            </div>
+        <div class= "main-menu-button-container">
+            <button class = "continue-game-button" id="continueGameButton"><a href="gameboard.html">Continue</a></button>
+            <button id="newGameButton" ><a>New Game</a></button>
+            <button id="rulesButton"><a href="howToPlay.html">How To Play</a></button>
+            <button id="settingsButton"><a href="themes.html">Settings</a></button>
         </div>
-
-        <div id="instructions-container">
-            <h1>How To Play</h1>
-            <p>The game is relatively simple, it's just like Tic-Tac-Toe... except you're playing 9 games... 
-                all at once...</p>
-            <p>The first player may start anywhere in any of the Tic-Tac-Toe games. But note that where you go
-                controls where the next player goes. For example, if you play in the top left box of any of the Tic-Tac-Toe games,
-                the next player must play in the top left Tic-Tac-Toe game. Then if they play in the center box of the top left Tic-Tac-Toe game,
-                you must play your next move in the center Tic-Tac-Toe game.</p>
-            <p>Once you get three in a row in any of the games, a red letter will be overlaid to indicate that you won that game.
-                Both players may still play in a game that's already been claimed, but once an individual game has been won, 
-                the outcome cannot be changed, even if the other player gets three in a row after it's been claimed.</p>
-            <p>In order to win, you must get three in a row by winning the individual Tic-Tac-Toe games.</p>
-            <h3>Conquest Version</h3>
-            <p>The only difference in the conquest version is that if you get three in a row in a game that's already been won,
-                you take over that game and are declared the winner of that game. So be careful to protect your winnings!</p>
-            <button type="button" onclick="returnHome()">Return to Home</button>
-        </div>
-
-        <button type="button" onclick="location.reload()" id="restart-button">Restart</button>
-
-
-        <script src='main.js'></script>
-    </body>
+    </div>
+    
+    <div class = "new-game-modal" id="newGameModal">
+        <button id="normalModeButton"><a>Normal</a></button>
+        <button id="conquestModeButton"><a>Conquest</a></button>
+    </div>
+    <div class = "new-game-modal-background" id="newGameModalBackground"></div>
+    
+</body>
 </html>
