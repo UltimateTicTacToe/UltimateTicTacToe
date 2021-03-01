@@ -625,7 +625,7 @@ button:focus{
 .how-to-play-turn-indicator.circled{
     border: solid 3px red;
     border-radius: 50%;
-    padding: 8vw;
+    padding: 4vw;
 }
 
 .how-to-play-turn-indicator.X::before,
@@ -666,7 +666,7 @@ button:focus{
 .how-to-play-playable-section-indicator.circled{
     border: solid 3px red;
     border-radius: 50%;
-    padding: 8vw;
+    padding: 4vw;
 }
 
 .how-to-play-board-whole{
@@ -1029,6 +1029,13 @@ button:focus{
 
     .how-to-play-text-container{
         font-size: 4vw;
+    }
+    .how-to-play-turn-indicator.circled{
+        padding: 8vw;
+    }
+    
+    .how-to-play-playable-section-indicator.circled{
+        padding: 8vw;
     }
 
 }
