@@ -121,7 +121,7 @@ function instructionFour() {
     cellElements.forEach(cell => {
         cell.classList.remove('X', 'O');
     })
-    howToPlayText.innerHTML = "Once a board has been won, the outcome cannot be changed even if the other player later gets a tic-tac-toe in the same board";
+    howToPlayText.innerHTML = "Once a board has been won, the outcome cannot be changed even if the other player later gets a tic-tac-toe in the same board"; 
     howToPlayText.innerHTML += "<br><br>However, in an alternative game mode called 'Conquest Mode', getting a tic-tac-toe in an already won board will cause the board to be overtaken.";
     cellElements[63].classList.add('X');
     cellElements[4].classList.add('O');
