@@ -79,8 +79,8 @@ function instructionTwo() {
     cellElements.forEach(cell => {
         cell.classList.remove('X', 'O');
     })
-    howToPlayText.innerHTML = "For example, if player 1 plays in the top left box of the bottom middle board, then player 2 must play in the top left board.";
-    howToPlayText.innerHTML += "<br><br>Then, if player 2 plays in the center box of the top left board, player 1 must play their next move in the center board.";
+    howToPlayText.innerHTML = "For example, if player 1 (X) plays in the top left box of the bottom middle board, then player 2 (O) must play in the top left board.";
+    howToPlayText.innerHTML += "<br><br>Then, if player 2 (O) plays in the center box of the top left board, player 1 (X) must play their next move in the center board.";
     cellElements[63].classList.add('X');
     cellElements[4].classList.add('O');
 }
@@ -122,7 +122,7 @@ function instructionFour() {
         cell.classList.remove('X', 'O');
     })
     howToPlayText.innerHTML = "Once a board has been won, the outcome cannot be changed even if the other player later gets a tic-tac-toe in the same board";
-    howToPlayText.innerHTML += "<br><br>However, in conquest mode, getting a tic-tac-toe in an already won board will cause the board to be overtaken.";
+    howToPlayText.innerHTML += "<br><br>However, in an alternative game made called 'Conquest Mode', getting a tic-tac-toe in an already won board will cause the board to be overtaken.";
     cellElements[63].classList.add('X');
     cellElements[4].classList.add('O');
     cellElements[40].classList.add('X');
