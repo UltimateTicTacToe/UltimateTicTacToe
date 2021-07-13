@@ -568,7 +568,7 @@ button:focus{
 }
 
 #themeTwelveButton{
-    background: black;
+    background: #222;
 }
 
 .back-button{
@@ -617,15 +617,15 @@ button:focus{
 
 .how-to-play-turn-indicator{
     display: flex;
-    height: 6vh;
-    width: 15%;
+    position: relative;
+    height: 12vh;
+    width: 12vh;
     justify-content: center;
 }
 
 .how-to-play-turn-indicator.circled{
     border: solid 3px red;
     border-radius: 50%;
-    padding: 4vw;
 }
 
 .how-to-play-turn-indicator.X::before,
@@ -649,9 +649,10 @@ button:focus{
 
 .how-to-play-playable-section-indicator{
     display: flex;
+    position: relative;
     justify-content: center;
-    height: 7vh;
-    width: 15%;
+    height: 12vh;
+    width: 12vh;
 }
 
 .how-to-play-playable-section-indicator p{
@@ -666,7 +667,30 @@ button:focus{
 .how-to-play-playable-section-indicator.circled{
     border: solid 3px red;
     border-radius: 50%;
-    padding: 4vw;
+}
+
+.how-to-play-conquest-mode-indicator{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 12vh;
+    width: 12vh;
+}
+
+.how-to-play-conquest-mode-indicator p:before{
+    font-family: var(--default-font-family);
+    color: var(--game-info-text-color);
+    content: '\2694';
+    font-size: 6vh;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+}
+
+.how-to-play-conquest-mode-indicator.circled{
+    border: solid 3px red;
+    border-radius: 50%;
+    bottom: 3px;
 }
 
 .how-to-play-board-whole{
@@ -830,6 +854,7 @@ button:focus{
 
 .how-to-play-text-container p{
     margin: 0;
+    color: var(--marker-color);
 }
 
 .how-to-play-arrows-container{
@@ -851,7 +876,7 @@ button:focus{
 }
 
 .how-to-play-arrow {
-    border: solid black;
+    border: solid var(--marker-color);
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 2vh;
@@ -1030,9 +1055,9 @@ button:focus{
     .how-to-play-text-container{
         font-size: 4vw;
     }
-    .how-to-play-turn-indicator.circled{
+    /*.how-to-play-turn-indicator.circled{
         padding: 8vw;
-    }
+    }*/
     
     .how-to-play-playable-section-indicator.circled{
         padding: 8vw;

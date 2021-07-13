@@ -7,6 +7,7 @@ const gameBoard = document.getElementById('howToPlayBoardWhole');
 const gameIndicators = document.getElementById('howToPlayGameIndicators');
 const turnIndicator = document.getElementById('howToPlayTurnIndicator');
 const sectionIndicator = document.getElementById('howToPlaySectionIndicator');
+const conquestIndicator = document.getElementById('howToPlayConquestModeIndicator');
 let instructionCounter = 0;
 
 instructionZero();
@@ -19,7 +20,7 @@ function clickLeftArrow() {
 }
 
 function clickRightArrow() {
-    if(instructionCounter < 7) instructionCounter += 1;
+    if(instructionCounter < 8) instructionCounter += 1;
     functionCaller(instructionCounter)
 }
 
@@ -48,6 +49,9 @@ function functionCaller(instructionCounter) {
             break;
         case 7: 
             instructionSeven();
+            break;
+        case 8:
+            instructionEight();
             break;
         default:
             instructionZero();
@@ -192,7 +196,6 @@ function instructionFive() {
 }
 
 function instructionSix() {
-    rightArrow.firstChild.classList.remove('hide');
     boardSection.forEach(section => {
         section.classList.remove('X-win', 'O-win');
     })
@@ -207,8 +210,16 @@ function instructionSix() {
 }
 
 function instructionSeven() {
-    rightArrow.firstChild.classList.add('hide');
+    rightArrow.firstChild.classList.remove('hide');
     turnIndicator.classList.remove('circled');
+    conquestIndicator.classList.remove('circled');
     sectionIndicator.classList.add('circled');
     howToPlayText.innerHTML = "This indicator on the top right of the board indicates which board to play in";
+}
+
+function instructionEight() {
+    rightArrow.firstChild.classList.add('hide');
+    sectionIndicator.classList.remove('circled');
+    conquestIndicator.classList.add('circled');
+    howToPlayText.innerHTML = "This indicator in the middle indicates that you are playing in 'Conquest Mode'";
 }

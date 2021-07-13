@@ -203,18 +203,18 @@ function setThemeEleven(){
 }
 
 function setThemeTwelve(){
-    localStorage.baseBackgroundColor = 'black';
-    localStorage.buttonColor = 'black';
-    localStorage.buttonTextColor = 'lightgrey';
-    localStorage.buttonBorderColor = 'lightgrey';
+    localStorage.baseBackgroundColor = '#222';
+    localStorage.buttonColor = '#222';
+    localStorage.buttonTextColor = '#CCC';
+    localStorage.buttonBorderColor = '#CCC';
     localStorage.buttonHoverShadow = '0px 0px 10px #EAEAEA inset';
-    localStorage.largeGameboardColor = 'lightgrey';
-    localStorage.smallGameboardsColor = 'lightgrey';
-    localStorage.markerColor = 'lightgrey';
+    localStorage.largeGameboardColor = '#CCC';
+    localStorage.smallGameboardsColor = '#CCC';
+    localStorage.markerColor = '#CCC';
     localStorage.markerHoverColor = 'darkgrey';
     localStorage.sectionWinMarkerColor = 'grey';
-    localStorage.gameInfoTextColor = 'lightgrey';
-    localStorage.titleColor = 'lightgrey';
+    localStorage.gameInfoTextColor = '#CCC';
+    localStorage.titleColor = '#CCC';
     getTheme();
 }
 
